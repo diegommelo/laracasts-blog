@@ -4,6 +4,7 @@
             @if ($posts->count())
                 <x-post-featured-card :post="$posts->first()"/>
                 <x-posts-grid :posts="$posts" />
+                {{ $posts->links() }}
             @else
                 <p class="text-center">No posts yet. Please check back later.</p>
             @endif
